@@ -1,32 +1,24 @@
 #include <iostream>
-#include "ReverseCode.h"
+#include <string>
+#include "binary_operations.h"
 
 int main() {
+    int num1, num2;
+    std::cout << "Enter the first decimal number: ";
+    std::cin >> num1;
+    std::cout << "Enter the second decimal number: ";
+    std::cin >> num2;
 
-    ReverseCode<int> num1(12);
-    ReverseCode<int> num2(4);
-    
+    std::string binary1 = decimalToBinary(num1);
+    std::string binary2 = decimalToBinary(num2);
 
-    std::cout << "Number 1: ";
-    num1.print();
-    std::cout << "Number 2: ";
-    num2.print();
+    std::cout << "First number in binary: " << binary1 << std::endl;
+    std::cout << "Second number in binary: " << binary2 << std::endl;
 
-    ReverseCode<int> sum = num1 + num2;
-    std::cout << "Sum: ";
-    sum.print();
-
-    ReverseCode<int> difference = num1 - num2;
-    std::cout << "Difference: ";
-    difference.print();
-
-    ReverseCode<int> product = num1 * num2;
-    std::cout << "Product: ";
-    product.print();
-
-    ReverseCode<int> quotient = num1 / num2;
-    std::cout << "Quotient: ";
-    quotient.print();
+    std::cout << "Addition: " << binaryAddition(binary1, binary2) << std::endl;
+    std::cout << "Subtraction: " << binarySubtraction(binary1, binary2) << std::endl;
+    std::cout << "Multiplication: " << binaryMultiplication(binary1, binary2) << std::endl;
+    std::cout << "Division: " << binaryDivision(binary1, binary2) << std::endl;
 
     return 0;
 }
