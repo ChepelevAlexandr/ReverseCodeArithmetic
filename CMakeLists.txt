@@ -3,8 +3,4 @@ project(ReverseCodeArithmetic)
 
 set(CMAKE_CXX_STANDARD 11)
 
-file(GLOB_RECURSE sources "src/*.cpp")
-
-file(GLOB_RECURSE headers "include/*.h")
-
-add_executable(ReverseCodeArithmetic ${sources} ${headers})
+add_executable(ReverseCodeArithmetic main.cpp)
