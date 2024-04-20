@@ -48,7 +48,7 @@ public:
         B dividend = data;
         B divisor = other.data;
 
-        // ƒелаем операнды положительными дл€ упрощени€ алгоритма делени€
+
         bool dividend_sign = (dividend >> (BITS - 1)) & 1;
         bool divisor_sign = (divisor >> (BITS - 1)) & 1;
 
@@ -73,7 +73,7 @@ public:
 
         quotient >>= 1;
 
-        // ≈сли операнды имели разные знаки, мен€ем знак частного
+
         if (dividend_sign != divisor_sign) {
             quotient = ones_compl_int<B>(quotient).twos_complement().data;
         }
@@ -87,7 +87,7 @@ public:
 };
 
 int main() {
-    setlocale(LC_ALL, "RU");
+
     int num1, num2;
 
     std::cout << "first integer: ";
